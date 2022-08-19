@@ -7,5 +7,6 @@ This is a free public repository that provides command-line examples and running
 
 
 ### Create a tutorial
-If you want to create your own commands to submit to this repository, here is a simple example template[here]([URL地址](https://github.com/cmdhelp/command/blob/master/template.md))
+If you want to create your own commands to submit to this repository, here is a simple example template[here(https://github.com/cmdhelp/command/blob/master/template.md))
+
 You can copy it directly to create a new command, remember to modify the relevant content above for your own 🍺
