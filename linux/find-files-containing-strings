@@ -1,0 +1,26 @@
+---
+title: How to find files containing strings in linux
+description: "In linux, you can try the grep command to find files containing strings"
+date: August 20 2022
+---
+## Introduction
+Find files containing strings via `grep`
+
+In the demo, look for the file containing `find test` in the `/home/cmdhelp/test` directory
+
+## Command Line
+```linux
+grep -rnw /home/cmdhelp/test -e 'find test'
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| grep   | Search for PATTERN in each FILE. |
+| -n   | print line number with output lines. |
+| -r   | like --directories=recurse. |
+| -w   | force PATTERN to match only whole words. |
+| -e   | use PATTERN for matching. |
+###  operation result
+```
+/home/cmdhelp/test/test.txt:4:find test
+```
