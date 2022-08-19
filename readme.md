@@ -7,27 +7,5 @@ This is a free public repository that provides command-line examples and running
 
 
 ### Create a tutorial
-If you want to create your own commands to submit to this repository, here is a simple example template
-
-```
-
----
-title: How to create SVG-ready icon symbols in Sketch PART 2
-description: "In linux, you can quickly move folders through the command line mv, or you can modify the folder name through mv"
-date: May 8 2021
----
-## Introduction
-You can move files or folders with the mv command
-## Command Line
-```linux
-mv testdir1 testuser1
-```
-## Parameter
-| parameter | Introduction                                                               |
-| --------- | -------------------------------------------------------------------------- |
-| mv   | path to data files to supply the data that will be passed into templates. |
-###  operation result
-```
-```
-
-```
+If you want to create your own commands to submit to this repository, here is a simple example template[here]([URL地址](https://github.com/cmdhelp/command/blob/master/template.md))
+You can copy it directly to create a new command, remember to modify the relevant content above for your own 🍺
