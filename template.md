@@ -1,0 +1,18 @@
+---
+title: How to create SVG-ready icon symbols in Sketch PART 2
+description: "In linux, you can quickly move folders through the command line mv, or you can modify the folder name through mv"
+date: May 8 2021
+---
+## Introduction
+You can move files or folders with the mv command
+## Command Line
+```linux
+mv testdir1 testuser1
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| mv   | path to data files to supply the data that will be passed into templates. |
+###  operation result
+```
+```
