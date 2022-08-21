@@ -8,7 +8,7 @@ In git, you can quickly add submodules through `submodules`
 ## Command Line
 Add the remote repository `command` to the `command` path of the current project
 ```linux
-git c add https://github.com/cmdhelp/command.git command/
+git submodule add https://github.com/cmdhelp/command.git command/
 ```
 ## Parameter
 | parameter | Introduction                                                               |
