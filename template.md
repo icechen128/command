@@ -1,23 +1,20 @@
 ---
-title: How to create SVG-ready icon symbols in Sketch PART 2
-description: "In linux, you can try the wc command to quickly count the number of lines in a file"
-date: August 20 2022
+title: How to create user in linux
+description: "In linux, you can quickly create a new user through adduser"
+date: August 21 2022
 ---
 ## Introduction
-In linux, you can try the `wc` command to quickly count the number of lines in a file
-
+In linux, you can quickly create a new user with `adduser`
 ## Command Line
-In the demo we count the number of lines in the `test.txt` file
+Create a user named `cmdhelp`
 ```linux
-wc -l test.txt
+sudo adduser cmdhelp
 ```
 ## Parameter
 | parameter | Introduction                                                               |
 | --------- | -------------------------------------------------------------------------- |
-| wc   |Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified.  A word is a non-zero-length sequence of characters delimited by white space.|
-| -l   |print the newline counts.|
-
+| sudo   |execute a command as another user|
+| adduser   |Add user.|
 ###  operation result
 ```
-4 test.txt
 ```
