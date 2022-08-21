@@ -1,29 +1,29 @@
 ---
-title: How to create user in linux
-description: "In linux, you can quickly create a new user through adduser"
+title: How to add submodules in git
+description: "In git, you can quickly add submodules through submodules"
 date: August 21 2022
 ---
 ## Introduction
-In linux, you can quickly create a new user with `adduser`
+In git, you can quickly add submodules through `submodules`
 ## Command Line
-Change the password of the user `cmdhelp`
+Add the remote repository `command` to the `command` path of the current project
 ```linux
-sudo adduser cmdhelp
+git c add https://github.com/cmdhelp/command.git command/
 ```
 ## Parameter
 | parameter | Introduction                                                               |
 | --------- | -------------------------------------------------------------------------- |
-| sudo   |execute a command as another user|
-| adduser   |Add user.|
+| git   |free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.|
+| submodule   |Initialize, update or inspect submodules.|
 ###  operation result
 ```
-[sudo] password for root: 
-Changing password for user cmdhelp.
-New password: 
-BAD PASSWORD: The password is shorter than 8 characters
-Retype new password: 
-passwd: all authentication tokens updated successfully.
+Cloning into 'D:/code/test/command'...
+remote: Enumerating objects: 120, done.
+remote: Counting objects: 100% (120/120), done.
+remote: Compressing objects: 100% (106/106), done.
+remote: Total 120 (delta 31), reused 10 (delta 0), pack-reused 0
+Receiving objects: 100% (120/120), 26.57 KiB | 2.95 MiB/s, done.
+Resolving deltas: 100% (31/31), done.
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory
 ```
-### Notice
-
-If the password is less than 8 digits, you can continue to enter it for the second time.
