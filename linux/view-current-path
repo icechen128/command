@@ -1,0 +1,23 @@
+---
+title: How to check the current path in linux
+description: "In linux, you can use the pwd command to view the current path."
+date: August 22 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+In linux, you can use the `pwd` command to view the current path.
+## Command Line
+View the current path
+```linux
+/home/cmdhelp/test
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| pwd   |    Print the name of the current working directory.|
+
+###  operation result
+```
+/home/cmdhelp/test
+```
