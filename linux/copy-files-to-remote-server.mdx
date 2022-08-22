@@ -1,0 +1,23 @@
+---
+title: How to copy files to remote server in linux
+description: "In Linux, you can copy files to a remote server through the scp command"
+date: August 22 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+In Linux, you can copy files to a remote server through the `scp` command
+## Command Line
+Copy the `kafka_2.12-3.2.1.tgz` file to the `/home/cmdhelp/test` directory of the remote server `192.168.91.135`
+```linux
+scp kafka_2.12-3.2.1.tgz root@192.168.91.135:/home/cmdhelp/test
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| scp   |Commands to copy files remotely under Linux.|
+###  operation result
+```
+root@192.168.91.135's password:
+kafka_2.12-3.2.1.tgz                                                                  100%   99MB  74.7MB/s   00:01
+```
