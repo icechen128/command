@@ -1,0 +1,117 @@
+---
+title: How to install kafka in centos8
+description: "This tutorial introduces the quick installation of kafka in the centos8 environment. You can install kafka smoothly by following the steps in the tutorial"
+date: August 22 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+This tutorial introduces the quick installation of `kafka` in the `centos8` environment. You can install kafka smoothly by following the steps in the tutorial
+
+### Preparation
+
+1.Install the `java` environment
+2.Download the `kafka` package：http://kafka.apache.org/downloads
+
+### Installation tutorial
+
+Unzip the downloaded file
+```linux
+tar -zxf kafka_2.12-3.2.1.tgz
+```
+
+Enter the decompressed kafka directory 
+
+```linux
+cd kafka_2.12-3.2.1/
+```
+Create the zookeeper data storage directory
+```linux
+mkdir -p zk/data
+```
+Create zookeeper log storage log directory
+```linux
+mkdir -p zk/logs
+```
+Enter the configuration directory
+```linux
+cd config
+```
+
+Backup zookeeper configuration file
+```linux
+mv zookeeper.properties zookeeper.properties.bak
+```
+Create configuration file
+```linux
+cat > zookeeper.properties << EOF
+tickTime=2000
+dataDir=/home/cmdhelp/test/kafka_2.12-3.2.1/zk/zk/data
+dataLogDir=/home/cmdhelp/test/kafka_2.12-3.2.1/zk/zk/logs
+clientPort=2181
+EOF
+```
+
+Enter the kafka directory
+```linux
+cd /home/cmdhelp/test/kafka_2.12-3.2.1
+```
+
+Create log directory
+```linux
+mkdir logs
+```
+Go to the configuration file directory
+```linux
+cd config
+```
+Backup configuration files
+```linux
+mv server.properties server.properties.bak
+```
+Create configuration file
+```linux
+cat > server.properties << EOF
+broker.id=1
+listeners=PLAINTEXT://192.168.91.135:9092
+num.network.threads=3
+num.io.threads=8
+socket.send.buffer.bytes=102400
+socket.receive.buffer.bytes=102400
+socket.request.max.bytes=104857600
+log.dirs=/home/cmdhelp/test/kafka_2.12-3.2.1/logs
+num.partitions=1
+num.recovery.threads.per.data.dir=1
+offsets.topic.replication.factor=1
+transaction.state.log.replication.factor=1
+transaction.state.log.min.isr=1
+log.retention.hours=168
+log.segment.bytes=1073741824
+log.retention.check.interval.ms=300000
+zookeeper.connect=192.168.91.135:2181
+zookeeper.connection.timeout.ms=6000
+group.initial.rebalance.delay.ms=0
+EOF
+```
+start zookeeper
+```linux
+/home/cmdhelp/test/kafka_2.12-3.2.1/bin/zookeeper-server-start.sh -daemon /home/cmdhelp/test/kafka_2.12-3.2.1/config/zookeeper.properties
+```
+start kafka
+```linux
+/home/cmdhelp/test/kafka_2.12-3.2.1/bin/kafka-server-start.sh -daemon /home/cmdhelp/test/kafka_2.12-3.2.1/config/server.properties 
+```
+
+ps:The installation is complete, it should be noted that the Java environment must be installed to start normally
+
+### other operations
+Shut down the zookeeper service
+```linux
+/home/cmdhelp/test/kafka_2.12-3.2.1/bin/zookeeper-server-stop.sh
+```
+Close the kafka service
+```linux
+/home/cmdhelp/test/kafka_2.12-3.2.1/bin/kafka-server-stop.sh
+```
+
+
