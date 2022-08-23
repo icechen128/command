@@ -1,7 +1,7 @@
 ---
 title: How to view hidden files in linux
 description: "In Linux system, you can view hidden files or folders by ls command"
-date: August 22 2022
+date: August 23 2022
 author: cmdhelp
 authorUrl: https://github.com/cmdhelp
 ---
