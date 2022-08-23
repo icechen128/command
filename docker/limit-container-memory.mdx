@@ -1,0 +1,30 @@
+---
+title: How to present the memory of a docker container
+description: "When we use docker, we often encounter that the memory used by the docker container is larger than the memory of the docker host, which will cause the host to crash, resulting in shutdown, which can be prevented by limiting the container memory."
+date: August 23 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+When we use `docker`, we often encounter that the `memory` used by the `docker` container is larger than the `memory` of the `docker` host, which will cause the host to crash, resulting in shutdown, which can be prevented by limiting the container `memory`.
+## Command Line
+Start the `hello-world` container and limit the memory size to `1g`
+```bash
+docker run -d --name hello-world --memory 1G hello-world
+```
+
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| run   |Run a command in a new container.|
+| -d   |Run container in background and print container ID.|
+| --name   |Assign a name to the container.|
+| --memory  |Memory limit.|
+
+###  operation result
+```
+b8af02560de92655228155f96fa773038b298288061c1ba8dfa8b00f23bdc8e1
+```
+
+### Notice
+<font color="#dd0000">The current configuration is only used for testing, if you want to use it in a production environment, you need to adjust it according to your needs</font>
