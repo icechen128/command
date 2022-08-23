@@ -16,34 +16,34 @@ This tutorial introduces the quick installation of `kafka` in the `centos8` envi
 ### Installation tutorial
 
 Unzip the downloaded file
-```linux
+```bash
 tar -zxf kafka_2.12-3.2.1.tgz
 ```
 
 Enter the decompressed kafka directory 
 
-```linux
+```bash
 cd kafka_2.12-3.2.1/
 ```
 Create the zookeeper data storage directory
-```linux
+```bash
 mkdir -p zk/data
 ```
 Create zookeeper log storage log directory
-```linux
+```bash
 mkdir -p zk/logs
 ```
 Enter the configuration directory
-```linux
+```bash
 cd config
 ```
 
 Backup zookeeper configuration file
-```linux
+```bash
 mv zookeeper.properties zookeeper.properties.bak
 ```
 Create configuration file
-```linux
+```bash
 cat > zookeeper.properties << EOF
 tickTime=2000
 dataDir=/home/cmdhelp/test/kafka_2.12-3.2.1/zk/zk/data
@@ -53,24 +53,24 @@ EOF
 ```
 
 Enter the kafka directory
-```linux
+```bash
 cd /home/cmdhelp/test/kafka_2.12-3.2.1
 ```
 
 Create log directory
-```linux
+```bash
 mkdir logs
 ```
 Go to the configuration file directory
-```linux
+```bash
 cd config
 ```
 Backup configuration files
-```linux
+```bash
 mv server.properties server.properties.bak
 ```
 Create configuration file
-```linux
+```bash
 cat > server.properties << EOF
 broker.id=1
 listeners=PLAINTEXT://192.168.91.135:9092
@@ -94,11 +94,11 @@ group.initial.rebalance.delay.ms=0
 EOF
 ```
 start zookeeper
-```linux
+```bash
 /home/cmdhelp/test/kafka_2.12-3.2.1/bin/zookeeper-server-start.sh -daemon /home/cmdhelp/test/kafka_2.12-3.2.1/config/zookeeper.properties
 ```
 start kafka
-```linux
+```bash
 /home/cmdhelp/test/kafka_2.12-3.2.1/bin/kafka-server-start.sh -daemon /home/cmdhelp/test/kafka_2.12-3.2.1/config/server.properties 
 ```
 
@@ -106,11 +106,11 @@ ps:The installation is complete, it should be noted that the Java environment mu
 
 ### other operations
 Shut down the zookeeper service
-```linux
+```bash
 /home/cmdhelp/test/kafka_2.12-3.2.1/bin/zookeeper-server-stop.sh
 ```
 Close the kafka service
-```linux
+```bash
 /home/cmdhelp/test/kafka_2.12-3.2.1/bin/kafka-server-stop.sh
 ```
 

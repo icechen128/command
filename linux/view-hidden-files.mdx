@@ -9,7 +9,7 @@ authorUrl: https://github.com/cmdhelp
 In Linux system, you can view hidden files or folders by `ls` command
 ## Command Line
 View all files in the current directory
-```linux
+```bash
 ls -a
 ```
 ## Parameter
