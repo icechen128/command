@@ -1,0 +1,29 @@
+---
+title: How to download files in linux
+description: "In linux, you can use curl to quickly download files and save them locally"
+date: August 23 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+In linux, you can use `curl` to quickly download files and save them locally
+## Command Line
+Download `https://github.com` webpage and save it to local `github.html`
+```bash
+curl https://github.com -o github.html
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| curl   |is  a tool to transfer data from or to a server, using one of the
+       supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS,  IMAP,
+       IMAPS,  LDAP,  LDAPS,  POP3,  POP3S,  RTMP, RTSP, SCP, SFTP, SMB, SMBS,
+       SMTP, SMTPS, TELNET and TFTP). The command is designed to work  without
+       user interaction.|
+| -o  |Write to file instead of stdout|
+###  operation result
+```
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   161  100   161    0     0   1412      0 --:--:-- --:--:-- --:--:--  1412
+```
