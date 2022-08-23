@@ -1,0 +1,61 @@
+---
+title: How to install docker in Centos8
+description: "In centos8, we can quickly install docker through yum"
+date: August 23 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+In centos8, we can quickly install docker through `yum`
+
+### Preparation
+Uninstall historical versions of docker
+```bash
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+```
+
+Install yum-utils
+```bash
+sudo yum install -y yum-utils
+```
+
+Uninstall the built-in podman
+```bash
+sudo yum erase podman buildah
+```
+
+### Install
+
+Add repository
+```bahs
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+install docker
+```bash
+sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+docker starten
+```bash
+systemctl start docker
+```
+ 
+Start einstellen
+```bahs
+systemctl enable docker
+```
+Test
+```bash
+sudo docker run hello-world
+```
+
