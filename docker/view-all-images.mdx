@@ -1,0 +1,25 @@
+---
+title: How to view local image in docker
+description: "You can use the images command to quickly view all local images in docker."
+date: August 24 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+You can use the `images` command to quickly view all local images in `docker`
+## Command Line
+View all local `images`
+```bash
+docker images
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| images   |List images.|
+###  operation result
+```
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+nginx         latest    605c77e624dd   7 months ago    141MB
+mysql         latest    3218b38490ce   8 months ago    516MB
+hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
+```
