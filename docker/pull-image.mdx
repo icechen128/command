@@ -1,0 +1,38 @@
+---
+title: How to pull images in docker
+description: "There are a large number of high-quality images in the docker hub, which can be downloaded and used directly."
+date: August 24 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+There are a large number of high-quality `images` in the `docker` hub, which can be downloaded and used directly.
+## Command Line
+`Pull` the `mysql` image
+```bash
+docker pull mysql
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| pull   |Pull an image or a repository from a registry.|
+###  operation result
+```
+Using default tag: latest
+latest: Pulling from library/mysql
+72a69066d2fe: Pull complete 
+93619dbc5b36: Pull complete 
+99da31dd6142: Pull complete 
+626033c43d70: Pull complete 
+37d5d7efb64e: Pull complete 
+ac563158d721: Pull complete 
+d2ba16033dad: Pull complete 
+688ba7d5c01a: Pull complete 
+00e060b6d11d: Pull complete 
+1c04857f594f: Pull complete 
+4d7cfa90e6ea: Pull complete 
+e0431212d27d: Pull complete 
+Digest: sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709
+Status: Downloaded newer image for mysql:latest
+docker.io/library/mysql:latest
+```
