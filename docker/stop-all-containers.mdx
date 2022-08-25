@@ -1,0 +1,26 @@
+---
+title: How to stop all containers in docker
+description: "In docker, you can quickly pause all containers with the stop command"
+date: August 25 2022
+author: cmdhelp
+authorUrl: https://github.com/cmdhelp
+---
+## Introduction
+In docker, you can quickly stop all containers with the `stop` command
+## Command Line
+stop all containers
+```bash
+docker stop $(docker ps -q)
+```
+## Parameter
+| parameter | Introduction                                                               |
+| --------- | -------------------------------------------------------------------------- |
+| stop   |Stop one or more running containers.|
+| ps   |List containers.|
+| -q   |Only display container IDs.|
+
+###  operation result
+```
+c8602711fb44
+b8af02560de9
+```
